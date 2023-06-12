@@ -1,0 +1,25 @@
+{
+  "name": "vscode-maitake",
+  "displayName": "vscode-maitake",
+  "description": "maitake",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "maitake",
+      "aliases": ["Maitake", "maitake"],
+      "extensions": [".mai"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "maitake",
+      "scopeName": "source.maitake",
+      "path": "./syntaxes/maitake.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Maitake",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#constants"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.maitake",
+          "match": "\\b(use|export|func|let|type|trait|match|struct|map|enum|impl)\\b"
+        },
+        {
+          "name": "keyword.operator",
+          "match": ">>|->|<-|=|\\.|:|::|\\+|-|%|\\*"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.maitake",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.maitake",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment.maitake",
+      "patterns": [
+        {
+          "name": "comment.maitake",
+          "match": "#.*"
+        }
+      ]
+    },
+    "variables": {
+      "name": "variable.maitake",
+      "patterns": [
+        {
+          "name": "entity.name.function",
+          "match": "[a-z_]+\\("
+        },
+        {
+          "name": "entity.name.function",
+          "match": "[a-z_]+(?=\\s=\\sfunc)|[a-z_]+(?=\\s?:\\sfunc)"
+        },
+        {
+          "name": "entity.name.function",
+          "match": "\\[%.+\\]"
+        },
+        {
+          "name": "support.function",
+          "match": "[a-z_]+(?=::)|(?<=::)[a-z_]+"
+        },
+        {
+          "name": "entity.name.type",
+          "match": "(?<=<\\s?)[a-z_]+(?=\\s?>)|(?<=:\\s?)[a-z_]+"
+        },
+        {
+          "name": "entity.name",
+          "match": "[a-z_]+"
+        }
+      ]
+    },
+    "types": {
+      "name": "entity.name.class",
+      "patterns": [
+        {
+          "name": "entity.name.class",
+          "match": "[A-Z][a-z]*"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric",
+          "match": "\\d+"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.maitake"
+}
