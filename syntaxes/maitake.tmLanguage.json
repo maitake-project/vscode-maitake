@@ -26,11 +26,11 @@
       "patterns": [
         {
           "name": "keyword.control.maitake",
-          "match": "\\b(use|export|func|let|type|trait|match|struct|map|enum|impl)\\b"
+          "match": "\\b(use|export|func|let|type|trait|match|struct|mut|enum|bind|fn)\\b"
         },
         {
           "name": "keyword.operator",
-          "match": ">>|->|<-|=|\\.|:|::|\\+|-|%|\\*"
+          "match": "&|->|<-|=|\\.|::|\\+|-|%|\\*"
         }
       ]
     },
@@ -63,7 +63,7 @@
         },
         {
           "name": "entity.name.function",
-          "match": "[a-z_]+(?=\\s=\\sfunc)|[a-z_]+(?=\\s?:\\sfunc)"
+          "match": "[a-z_]+(?=\\s=\\sfn)|[a-z_]+(?=\\s?:\\sfn)"
         },
         {
           "name": "entity.name.function",
