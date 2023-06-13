@@ -25,12 +25,16 @@
     "keywords": {
       "patterns": [
         {
+          "name": "keyword.maitake",
+          "match": "\\b(use|export|let|trait|struct|mut|enum|bind|fn)\\b"
+        },
+        {
           "name": "keyword.control.maitake",
-          "match": "\\b(use|export|let|type|trait|match|struct|mut|enum|bind|fn)\\b"
+          "match": "\\b(match)\\b"
         },
         {
           "name": "keyword.operator",
-          "match": "&|->|<-|=|\\.|::|\\+|-|%|\\*"
+          "match": "&|<-|=|\\.|::|\\+|-|%|\\*"
         }
       ]
     },
