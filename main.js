@@ -1,4 +1,4 @@
-let vscode = require("vscode");
+const vscode = require("vscode");
 
 let configuration = undefined;
 
