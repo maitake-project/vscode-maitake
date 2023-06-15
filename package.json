@@ -9,17 +9,30 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./main.js",
   "contributes": {
-    "languages": [{
-      "id": "maitake",
-      "aliases": ["Maitake", "maitake"],
-      "extensions": [".mai"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "maitake",
-      "scopeName": "source.maitake",
-      "path": "./syntaxes/maitake.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "maitake",
+        "aliases": [
+          "Maitake",
+          "maitake"
+        ],
+        "extensions": [
+          ".mai"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "maitake",
+        "scopeName": "source.maitake",
+        "path": "./syntaxes/maitake.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "@types/vscode": "^1.79.1"
   }
 }

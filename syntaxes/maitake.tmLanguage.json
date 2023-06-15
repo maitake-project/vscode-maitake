@@ -26,7 +26,7 @@
       "patterns": [
         {
           "name": "keyword.maitake",
-          "match": "\\b(expose|use|let|trait|struct|mut|enum|bind|fn)\\b"
+          "match": "\\b(expose|use|let|trait|struct|record|type|union|mut|enum|bind|fn)\\b"
         },
         {
           "name": "keyword.control.maitake",
@@ -34,7 +34,7 @@
         },
         {
           "name": "keyword.operator",
-          "match": "&|<-|=|\\.|::|\\+|-|%|\\*|\\!"
+          "match": "&|->|<-|=|\\.|::|\\+|-|%|\\*|\\!"
         }
       ]
     },
@@ -101,6 +101,10 @@
         {
           "name": "constant.numeric",
           "match": "\\d+"
+        },
+        {
+          "name": "entity.name.class",
+          "match": ":[a-z]*"
         }
       ]
     }
